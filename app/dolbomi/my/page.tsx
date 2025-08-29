@@ -80,10 +80,10 @@ export default function My() {
             </div>
             <div className="flex items-center gap-2 text-[14px] text-[var(--text1)]">
               <div className="flex">
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
-                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
+                <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
+                <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
+                <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
                 <FontAwesomeIcon icon={faStarHalfStroke} />
               </div>
               <div>4.7점</div>

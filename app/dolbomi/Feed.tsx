@@ -96,7 +96,7 @@ export const Feed = ({
               </div>
               <div className="gap-3 flex items-center">
                 <img
-                  src={"/dummy_dolbomi.png"}
+                  src={"/dummy_dolbomi0.png"}
                   alt="preview"
                   className="w-14 h-14 object-cover rounded"
                   style={{ backgroundColor: "var(--sub)", borderRadius: 100 }}

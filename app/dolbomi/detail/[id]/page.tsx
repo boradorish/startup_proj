@@ -1,5 +1,6 @@
 "use client";
 import { TopBanner } from "@/app/dolbomi/TopBanner";
+import { dummyFeedData } from "@/app/dummys";
 import {
   faAngleLeft,
   faBell,
@@ -28,6 +29,9 @@ export default function DetailPage() {
   const router = useRouter();
   const params = useParams(); // { id: "123" } 이런 식으로 옴
   const { id } = params;
+  const item = dummyFeedData.find(
+    (feed) => feed.id == (id as unknown as number)
+  );
   const [open, setOpen] = useState(false);
   const toggleDrawer = (state: boolean) => () => {
     setOpen(state);
@@ -45,7 +49,7 @@ export default function DetailPage() {
       <TopButton />
       <div
         className="px-5 py-2 mx-3"
-        style={{ backgroundColor: "var(--mainLight)", borderRadius: 10 }}
+        style={{ backgroundColor: "var(--mainLight2)", borderRadius: 5 }}
       >
         <div className="flex gap-2 pt-2 pb-4">
           <img
@@ -62,19 +66,11 @@ export default function DetailPage() {
           </div>
         </div>
 
-        <div className="font-bold text-[22px]">제목제목제목</div>
-        <div className="text-[15px]">
-          엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용 엄청 긴 내용내용내용 엄청 긴
-          내용내용내용 엄청 긴 내용내용내용
-        </div>
+        <div className="font-bold text-[22px]">{item?.title}</div>
+        <div className="text-[15px]">{item?.content}</div>
         <div className="pt-4 gap-3">
           <div className="font-bold text-[18px]">장소</div>
-          <div className="text-[15px]">서울 봉천동 청룡유치원</div>
+          <div className="text-[15px]">{item?.location}</div>
           <div className="font-bold text-[18px]">일시</div>
           <div className="text-[15px]">2025.09.25 오후 8시~오후 9시</div>
           <div className="font-bold text-[18px]">
@@ -82,9 +78,7 @@ export default function DetailPage() {
           </div>
           <div className="text-[15px]">50000</div>
         </div>
-        <div className="flex py-3 items-center justify-end gap-1 w-102">
-          <FontAwesomeIcon icon={faThumbsUp} />
-          <div>23</div>
+        <div className="flex py-3 items-center justify-end gap-1 w-82">
           <FontAwesomeIcon icon={faStar} />
           <div>12</div>
         </div>
@@ -95,13 +89,29 @@ export default function DetailPage() {
           sx={{
             width: 140,
             px: 0,
-            borderColor: "var(--sub)",
-            backgroundColor: "var(--sub)",
+            marginBottom: 2,
+            borderColor: "var(--main)",
+            backgroundColor: "var(--main)",
+            boxShadow: "none",
           }}
           onClick={toggleDrawer(true)}
         >
           지원하기
         </Button>
+      </div>
+      <div
+        className="mx-3 px-4 py-2 flex flex-col gap-3"
+        style={{ backgroundColor: "var(--mainLight2)", borderRadius: 5 }}
+      >
+        <div className="font-bold text-[18px]">이 돌봄에 지원한 지원자들</div>
+        <DolbomiProfile
+          name="이봉사"
+          id={1}
+          price={40000}
+          star={4.3}
+          age={43}
+        />
+        <DolbomiProfile name="김도움" id={0} price={43000} star={4.5} />
       </div>
       <Drawer
         anchor="bottom"
@@ -118,9 +128,9 @@ export default function DetailPage() {
         }}
       >
         <div className="flex flex-col p-4 text-[var(--text2)]">
-          <h2 className="text-lg font-bold mb-3 text-[var(--text2)]">
+          <div className="text-lg font-bold mb-3 text-[var(--text2)]">
             돌봄 지원하기
-          </h2>
+          </div>
           <div className="flex items-center gap-2">
             <span>나의 돌봄 리뷰 수:</span>
             <span>23</span>
@@ -234,5 +244,67 @@ const AlertModal = ({ open, content }: { open: boolean; content: string }) => {
         )}
       </div>
     </div>
+  );
+};
+
+const DolbomiProfile = ({
+  id = 0,
+  name = "김도움",
+  price = 50000,
+  star = 4.7,
+  age = 40,
+  gender = "여성",
+}: {
+  id?: number;
+  name?: string;
+  gender?: string;
+  price?: number;
+  star?: number;
+  age?: number;
+}) => {
+  return (
+    <>
+      <div className="gap-3 flex items-center">
+        <img
+          src={`/dummy_dolbomi${id}.png`}
+          alt="preview"
+          className="w-14 h-14 object-cover rounded"
+          style={{ backgroundColor: "var(--sub)", borderRadius: 100 }}
+        />
+        <div>
+          <div className="flex gap-1 items-center">
+            <div className="font-bold text-[16px] text-[var(--text2)]">
+              {name}
+            </div>
+            <div
+              className="text-[14px] text-[var(--mainLight)]"
+              style={{
+                backgroundColor: "var(--mainDark)",
+                borderRadius: 10,
+                padding: "0px 3px",
+              }}
+            >
+              {gender}
+            </div>
+            <div className="text-[14px] text-[var(--text2)]">{age}세</div>
+          </div>
+          <div className="flex gap-1 items-end text-[var(--text2)]">
+            <div className="font-bold text-[15px]">제시 금액:</div>
+            <div className="font-normal text-[14px]">{price}</div>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-[var(--text2)]">돌봄 별점:</span>
+            <div className="flex gap-1">
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon icon={faStarHalfStroke} />
+            </div>
+            <span>{star}</span>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
