@@ -12,7 +12,7 @@ export default function Chat() {
   return (
     <div className="app-container flex flex-col items-center">
       <TopBanner />
-      <div className="w-100 jusitfy-start mb-3">
+      <div className="w-90 jusitfy-start mb-3">
         <div className="font-bold text-[var(--text1)] text-[23px] ">채팅</div>
       </div>
       <div className="app-container flex flex-col items-center px-10 gap-5">

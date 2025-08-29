@@ -109,7 +109,7 @@ export default function DetailPage() {
         onClose={toggleDrawer(false)}
         sx={{
           width: "100%",
-          maxWidth: 480,
+          maxWidth: 393,
           left: "50%",
           transform: "translateX(-50%)",
           borderTopLeftRadius: 16,
@@ -178,7 +178,11 @@ export default function DetailPage() {
   );
 }
 
-export const TopButton = () => {
+export const TopButton = ({
+  type = "dolbomi",
+}: {
+  type?: "dolbomi" | "customer";
+}) => {
   const router = useRouter();
   return (
     <div className="flex justify-between w-full p-2 items-center">
@@ -187,9 +191,11 @@ export const TopButton = () => {
       </IconButton>
 
       <div>
-        <IconButton>
-          <FontAwesomeIcon icon={faBell} style={{ width: 20, height: 20 }} />
-        </IconButton>
+        {type == "dolbomi" && (
+          <IconButton>
+            <FontAwesomeIcon icon={faBell} style={{ width: 20, height: 20 }} />
+          </IconButton>
+        )}
         <IconButton>
           <FontAwesomeIcon
             icon={faEllipsisVertical}
@@ -208,14 +214,14 @@ const AlertModal = ({ open }: { open: boolean }) => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        maxWidth: "480px",
+        maxWidth: "393px",
         width: "100wh",
       }}
     >
       <div
         className="absolute z-2000 bottom-70 "
         style={{
-          maxWidth: "480px",
+          maxWidth: "393px",
           width: "100%",
         }}
       >

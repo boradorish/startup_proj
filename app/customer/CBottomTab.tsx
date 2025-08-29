@@ -26,7 +26,7 @@ export const CBottomTab = ({ location }: BottomTabProps) => {
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        maxWidth: 480,
+        maxWidth: 393,
         // borderTop: "2px solid var(--main)",
       }}
     >

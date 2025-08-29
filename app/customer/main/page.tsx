@@ -33,10 +33,10 @@ export default function Home() {
   return (
     <div className="app-container-customer flex flex-col items-center">
       <TopBanner />
-      <div className="w-100 jusitfy-start mb-3">
+      <div className="w-90 jusitfy-start mb-3">
         <div className="font-bold text-[var(--text1)] text-[23px] ">프로필</div>
       </div>
-      <div className=" w-100">
+      <div className=" w-90">
         <div className="flex gap-5">
           <div className="relative">
             <img
@@ -72,7 +72,7 @@ export default function Home() {
             <div className="flex gap-2 mb-2 text-[var(--text2)] text-[14px]"></div>
           </div>
         </div>
-        <div className="w-100 jusitfy-start mt-3">
+        <div className="w-90 jusitfy-start mt-3">
           <div className="font-bold text-[var(--text1)] text-[23px] ">
             돌봄 의뢰
           </div>

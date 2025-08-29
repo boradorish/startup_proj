@@ -32,12 +32,12 @@ export default function My() {
   return (
     <div className="app-container flex flex-col items-center ">
       <TopBanner />
-      <div className="w-100 jusitfy-start mb-3">
+      <div className="w-90 jusitfy-start mb-3">
         <div className="font-bold text-[var(--text1)] text-[23px] ">
           마이페이지
         </div>
       </div>
-      <div className=" w-100">
+      <div className=" w-90">
         <div className="flex gap-5">
           <div className="relative">
             <img

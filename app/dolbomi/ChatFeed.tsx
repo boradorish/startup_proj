@@ -5,7 +5,7 @@ export interface ChatFeedProps {
 export const ChatFeed = ({ name, content }: ChatFeedProps) => {
   return (
     <div>
-      <div className="flex items-center gap-5 w-100">
+      <div className="flex items-center gap-5 w-90">
         <img
           src={
             "https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
