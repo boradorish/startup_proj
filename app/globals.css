@@ -23,15 +23,15 @@
     --background: #0a0a0a;
     /* --foreground: #ededed; */
     --main: #553f2f;
-    --mainLight: #685e50;
-    --mainLight2: #5e5548;
+    --mainLight: #897b68;
+    --mainLight2: #685c4c;
     --mainDark: #3f2e22;
     --sub: #b0677d;
     --subLight: #9e6d80;
     --text1: #382c1b;
     --text2: #2d1f0c;
     --text3: #8e8c89;
-    --text4: #5a5752;
+    --text4: #5a5650;
   }
 }
 
@@ -46,7 +46,7 @@ body {
 .app-container {
   width: 100%;
   max-width: 480px; /* 모바일 폭 기준 */
-  min-height: 100%;
+  min-height: 100vh;
   background: var(--mainLight); /* 앱 영역 배경 */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05); /* 데스크탑에서 카드처럼 보이게 */
 }

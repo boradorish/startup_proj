@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import { useRouter } from "next/navigation";
 interface FeedProps {
+  id: number;
   title: string;
   content: string;
   location: string;
@@ -21,6 +22,7 @@ interface FeedProps {
 }
 
 export const Feed = ({
+  id,
   title,
   content,
   location,
@@ -30,7 +32,6 @@ export const Feed = ({
   scrap,
 }: FeedProps) => {
   const router = useRouter();
-  const [value, setValue] = useState(location);
 
   return (
     <div
@@ -40,6 +41,7 @@ export const Feed = ({
         width: 420,
       }}
       className="px-3 py-2"
+      onClick={() => router.push(`/dolbomi/detail/${id}`)}
     >
       <div className="text-[15px] font-bold text-[var(--text3)]">{title}</div>
       <div className="text-[12px] text-[var(--text4)]">{content}</div>
