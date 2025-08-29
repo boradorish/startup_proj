@@ -1,16 +1,4 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --main: #4a3c28;
-  --mainLight: #685e50;
-  --sub: #b0677d;
-  --subLight: #9e6d80;
-  --text1: #382c1b;
-  --text2: #2d1f0c;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -18,25 +6,23 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    /* --foreground: #ededed; */
-    --main: #9c7b63;
-    --mainLight: #b89984;
-    --mainLight2: #d2bfa6;
-    --mainDark: #3f2e22;
-    --sub: #ef9571;
-    --subLight: #f4ac90;
-    --subLight2: #f9c7af;
-    --subLight3: #fbd7d1;
-    --subDark: #c75f3b;
-    --subDark2: #6b2f1b;
-    --text1: #1f140a; /* 가장 진한 - 제목, 헤더 */
-    --text2: #2e2011; /* 진한 본문 - 일반 텍스트 */
-    --text3: #4b3a28; /* 중간 톤 - 서브텍스트 */
-    --text4: #7c6e5f;
-  }
+:root {
+  --background: #0a0a0a;
+  /* --foreground: #ededed; */
+  --main: #9c7b63;
+  --mainLight: #b89984;
+  --mainLight2: #c5ac95;
+  --mainDark: #3f2e22;
+  --sub: #ef9571;
+  --subLight: #f4ac90;
+  --subLight2: #f9c7af;
+  --subLight3: #fbd7d1;
+  --subDark: #c75f3b;
+  --subDark2: #6b2f1b;
+  --text1: #1f140a;
+  --text2: #2e2011;
+  --text3: #4b3a28;
+  --text4: #7c6e5f;
 }
 
 body {

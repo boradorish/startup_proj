@@ -45,7 +45,7 @@ export default function DetailPage() {
       <TopButton />
       <div
         className="px-5 py-2 mx-3"
-        style={{ backgroundColor: "var(--mainLight2)", borderRadius: 10 }}
+        style={{ backgroundColor: "var(--mainLight)", borderRadius: 10 }}
       >
         <div className="flex gap-2 pt-2 pb-4">
           <img
