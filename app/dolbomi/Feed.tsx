@@ -10,7 +10,7 @@ import {
 import { useState } from "react";
 import { Box, Button, Tab, Tabs } from "@mui/material";
 import { useRouter } from "next/navigation";
-interface FeedProps {
+export interface FeedProps {
   type?: "dolbomi" | "now" | "past";
   id: number;
   title: string;
@@ -52,7 +52,9 @@ export const Feed = ({
           : () => {}
       }
     >
-      <div className="text-[15px] font-bold text-[var(--text3)]">{title}</div>
+      <div className="text-[15px] font-bold text-[var(--text1)] mb-1">
+        {title}
+      </div>
       <div className="text-[12px] text-[var(--text2)]">{content}</div>
       <div className="h-2" />
       {type !== "past" && (

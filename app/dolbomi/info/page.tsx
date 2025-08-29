@@ -25,6 +25,7 @@ export default function Info() {
   const [preview, setPreview] = useState<string | null>(null);
   const [preview2, setPreview2] = useState<string | null>(null);
   const router = useRouter();
+  const [certi, setCerti] = useState<boolean>(false);
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -41,10 +42,10 @@ export default function Info() {
 
   return (
     <div className="app-container flex flex-col items-center justify-center">
-      <div className="h-10" />
-      <Stack sx={{ paddingX: 5 }} spacing={3}>
-        <div className="pt-4 text-[var(--text1)] text-[15px] font-bold flex items-center justify-center">
-          당신의 프로필을 등록해주세요.
+      <div className="h-2" />
+      <Stack sx={{ paddingX: 5 }} spacing={2}>
+        <div className="pt-4 text-[var(--text1)] text-[20px] font-bold flex items-center justify-center">
+          당신의 프로필을 등록해주세요
         </div>
         <div className="flex gap-10 items-center justify-center">
           <div className="relative">
@@ -82,10 +83,12 @@ export default function Info() {
             </IconButton>
           </div>
           <div className=" text-[var(--text1)] text-[11px] mr-5 ">
-            *본인의 얼굴이 정확히 나온 사진을 넣어주셔야 승인됩니다
+            *본인의 얼굴이 정확히 나온 사진을
+            <br />
+            넣지 않으면 반려될 수 있습니다.
           </div>
         </div>
-        <div>
+        <div className="flex gap-2 items-center">
           <div className="text-[var(--text1)] text-[15px] font-bold px-1">
             이름
           </div>
@@ -93,22 +96,23 @@ export default function Info() {
             required
             id="standard-required"
             variant="standard"
-            sx={{ width: "100%" }}
+            style={{ flexGrow: 1 }}
           />
         </div>
-        <div className="flex gap-4">
-          <div>
+        <div className="gap-4">
+          <div className="flex gap-2 items-center">
             <div className="text-[var(--text1)] text-[15px] font-bold px-1">
-              나이
+              생년월일
             </div>
-            <TextField
-              required
-              id="standard-required"
-              variant="standard"
-              sx={{ width: 200 }}
+            <input
+              type="date"
+              placeholder="일시"
+              className="placeholder:font-semibold
+            placeholder:text-[14px] flex-1 mr-2
+            placeholder:text-[var(--sub)] focus:outline-none transition "
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex gap-8 items-center">
             <div className="text-[var(--text1)] text-[15px] font-bold px-1">
               성별
             </div>
@@ -125,7 +129,7 @@ export default function Info() {
         </div>
         <div className="flex flex-col">
           <div className="text-[var(--text1)] text-[15px] font-bold px-1">
-            전화번호
+            휴대폰 번호
           </div>
           <div className="flex gap-5">
             <TextField
@@ -137,26 +141,55 @@ export default function Info() {
             <Button
               variant="outlined"
               sx={{
-                width: 140,
+                width: 150,
+                height: 30,
+                py: 0,
                 px: 0,
-                color: "var(--subDark)",
-                borderColor: "var(--subDark)",
+                color: "var(--subDark2)",
+                borderColor: "var(--subDark2)",
               }}
+              onClick={() => setCerti(!certi)}
             >
-              본인인증하기
+              인증번호받기
             </Button>
           </div>
         </div>
-        <div>
+        {certi && (
+          <div className="flex flex-col">
+            <div className="flex gap-5">
+              <TextField
+                required
+                id="standard-required"
+                variant="standard"
+                placeholder="인증 번호"
+                sx={{ width: "100%" }}
+              />
+              <Button
+                variant="outlined"
+                sx={{
+                  width: 120,
+                  height: 30,
+                  py: 0,
+                  px: 0,
+                  color: "var(--subDark2)",
+                  borderColor: "var(--subDark2)",
+                }}
+              >
+                인증하기
+              </Button>
+            </div>
+          </div>
+        )}
+        <div className="">
           <div className="text-[var(--text1)] text-[15px] font-bold pb-2 px-2">
             자기소개
           </div>
           <TextField
             id="outlined-multiline-static"
-            sx={{ width: "100%" }}
+            sx={{ width: "100%", padding: 0 }}
             multiline
             rows={4}
-            placeholder="본인의 돌봄 경력, 경험 등을 포함한 자기소개를 적어주세요."
+            placeholder="본인의 돌봄 경력 등을 설명해주세요."
           />
         </div>
         <div>
@@ -179,12 +212,15 @@ export default function Info() {
 
             <IconButton component="label">
               <div
-                style={{ borderRadius: 3, border: "2px dashed var(--subDark)" }}
+                style={{
+                  borderRadius: 3,
+                  border: "2px dashed var(--subDark2)",
+                }}
                 className="w-20 h-20 flex items-center justify-center"
               >
                 <FontAwesomeIcon
                   icon={faPlus}
-                  style={{ color: "var(--subDark)" }}
+                  style={{ color: "var(--subDark2)" }}
                 />
               </div>
               <input
@@ -203,15 +239,16 @@ export default function Info() {
         variant="contained"
         sx={{
           backgroundColor: "var(--sub)",
-          borderRadius: 4,
+          borderRadius: 2,
           paddingY: 1,
-          marginTop: 5,
+          marginTop: 3,
+          marginBottom: 5,
+          width: 230,
+          boxShadow: "none",
         }}
       >
         돌보미 사용하러 가기
       </Button>
-
-      <div className="h-20" />
     </div>
   );
 }

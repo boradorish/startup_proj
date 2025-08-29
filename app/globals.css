@@ -32,10 +32,10 @@
     --subLight3: #fbd7d1;
     --subDark: #c75f3b;
     --subDark2: #6b2f1b;
-    --text1: #382c1b;
-    --text2: #2d1f0c;
-    --text3: #473f33;
-    --text4: #5a5650;
+    --text1: #1f140a; /* 가장 진한 - 제목, 헤더 */
+    --text2: #2e2011; /* 진한 본문 - 일반 텍스트 */
+    --text3: #4b3a28; /* 중간 톤 - 서브텍스트 */
+    --text4: #7c6e5f;
   }
 }
 
