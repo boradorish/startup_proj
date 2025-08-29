@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main: #4a3c28;
+  --mainLight: #685e50;
+  --sub: #b0677d;
+  --subLight: #9e6d80;
+  --text1: #382c1b;
+  --text2: #2d1f0c;
 }
 
 @theme inline {
@@ -15,7 +21,13 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --foreground: #ededed; */
+    --main: #553f2f;
+    --mainLight: #685e50;
+    --sub: #b0677d;
+    --subLight: #9e6d80;
+    --text1: #382c1b;
+    --text2: #2d1f0c;
   }
 }
 
@@ -23,4 +35,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px; /* 모바일 폭 기준 */
+  min-height: 100%;
+  background: var(--mainLight); /* 앱 영역 배경 */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05); /* 데스크탑에서 카드처럼 보이게 */
 }
