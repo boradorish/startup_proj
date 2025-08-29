@@ -11,6 +11,7 @@ import { useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import { useRouter } from "next/navigation";
 interface FeedProps {
+  type?: "dolbomi" | "customer";
   id: number;
   title: string;
   content: string;
@@ -22,6 +23,7 @@ interface FeedProps {
 }
 
 export const Feed = ({
+  type = "dolbomi",
   id,
   title,
   content,
@@ -36,12 +38,16 @@ export const Feed = ({
   return (
     <div
       style={{
-        backgroundColor: "var(--mainDark)",
+        backgroundColor: "var(--main)",
         borderRadius: 7,
-        width: 420,
+        width: "100%",
       }}
       className="px-3 py-2"
-      onClick={() => router.push(`/dolbomi/detail/${id}`)}
+      onClick={
+        type == "dolbomi"
+          ? () => router.push(`/dolbomi/detail/${id}`)
+          : () => router.push(`/customer/now/applier`)
+      }
     >
       <div className="text-[15px] font-bold text-[var(--text3)]">{title}</div>
       <div className="text-[12px] text-[var(--text4)]">{content}</div>
