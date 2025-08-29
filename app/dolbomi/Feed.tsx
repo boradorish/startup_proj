@@ -65,9 +65,6 @@ export const Feed = ({
             <div className="text-[12px]  ">조회 {check}</div>
           </div>
           <div className="flex items-center text-[var(--text2)]">
-            <FontAwesomeIcon icon={faThumbsUp} style={{ width: 10 }} />
-            <div className="text-[12px] px-1">{likes}</div>
-
             <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
             <div className="text-[12px] px-1">{scrap}</div>
           </div>

@@ -32,20 +32,19 @@ export default function Login() {
   };
 
   return (
-    <div className="app-container">
-      <div className="h-60" />
-      <div className="w-20 h-20">이미지 </div>
-      <div className="pt-4 text-[var(--main)] text-[45px] flex items-center justify-center">
-        돌보미
+    <div className="app-container flex flex-col px-10">
+      <div className="h-30" />
+      <div className="flex flex-col items-center">
+        <img src="logo.png" width={220} height={220} />
       </div>
-      <div className="flex flex-col px-20">
+      <div className="flex flex-col px-10">
         <TextField
           id="standard-basic"
           label="id"
           variant="standard"
           value={id}
           onChange={(e) => setId(e.target.value)}
-          sx={{ borderColor: "var(--sub)" }}
+          sx={{ borderColor: "var(--sub)", width: "100%" }}
         />
         <TextField
           id="standard-basic"
@@ -53,11 +52,13 @@ export default function Login() {
           value={pw}
           onChange={(e) => setPw(e.target.value)}
           variant="standard"
+          sx={{ borderColor: "var(--sub)", width: "100%" }}
+          slotProps={{ htmlInput: { type: "password" } }}
         />
         <div className="h-4" />
         <Button
           variant="contained"
-          sx={{ backgroundColor: "var(--sub)" }}
+          sx={{ backgroundColor: "var(--sub)", boxShadow: "none" }}
           onClick={handleLogin}
         >
           로그인

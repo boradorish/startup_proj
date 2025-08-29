@@ -22,15 +22,16 @@
   :root {
     --background: #0a0a0a;
     /* --foreground: #ededed; */
-    --main: #8b715d;
-    --mainLight: #9a816c;
-    --mainLight2: #685c4c;
+    --main: #9c7b63;
+    --mainLight: #b89984;
+    --mainLight2: #d2bfa6;
     --mainDark: #3f2e22;
-    --sub: #b0677d;
-    --subLight: #aa768a;
-    --subLight2: #c59fae;
-    --subLight3: #bc96a5;
-    --subDark: #934b61;
+    --sub: #ef9571;
+    --subLight: #f4ac90;
+    --subLight2: #f9c7af;
+    --subLight3: #fbd7d1;
+    --subDark: #c75f3b;
+    --subDark2: #6b2f1b;
     --text1: #382c1b;
     --text2: #2d1f0c;
     --text3: #473f33;

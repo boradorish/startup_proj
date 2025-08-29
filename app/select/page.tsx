@@ -17,7 +17,7 @@ export default function Select() {
         <div className="pt-4 text-[var(--text1)] text-[15px] font-bold flex items-center justify-center">
           어떤 서비스를 원하시나요?
         </div>
-        <div className="flex flex-col px-30 gap-4">
+        <div className="flex flex-col px-15 gap-4">
           <Button
             variant="contained"
             onClick={() => router.push("/customer/main")}
