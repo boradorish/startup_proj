@@ -22,6 +22,7 @@ export default function Chat() {
             name={value.name}
             content={value.content}
             id={value.id}
+            disabled={value.disabled}
             isNew={value.isNew}
             type="customer"
           />

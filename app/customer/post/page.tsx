@@ -143,7 +143,6 @@ const PostTopButton = ({
 
   return (
     <>
-      {" "}
       <AlertModal open={modal} content="돌봄 지원이 완료되었어요" />
       <div className="flex justify-between w-full p-2 items-center">
         <IconButton onClick={() => router.back()}>

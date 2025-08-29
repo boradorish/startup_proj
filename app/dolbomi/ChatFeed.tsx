@@ -1,5 +1,6 @@
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/navigation";
 
 export interface ChatFeedProps {
   type?: "dolbomi" | "customer";
@@ -7,6 +8,7 @@ export interface ChatFeedProps {
   content: string;
   id?: number;
   isNew?: boolean;
+  disabled?: boolean;
 }
 export const ChatFeed = ({
   type = "dolbomi",
@@ -14,11 +16,19 @@ export const ChatFeed = ({
   name,
   content,
   isNew = false,
+  disabled = true,
 }: ChatFeedProps) => {
+  const router = useRouter();
   return (
     <div
       className="flex justify-between items-center gap-5 w-90 pb-2"
       style={{ borderBottom: "1px solid var(--mainLight2)" }}
+      onClick={() => {
+        console.log(disabled);
+        if (disabled) return;
+
+        router.push("chat/0");
+      }}
     >
       <div className="flex items-center gap-5 w-90">
         <img

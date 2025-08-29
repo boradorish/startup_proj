@@ -23,6 +23,7 @@ export default function ChatPage() {
             id={value.id}
             content={value.content}
             type="dolbomi"
+            disabled={value.disabled}
             isNew={value.isNew}
           />
         ))}
