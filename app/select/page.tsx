@@ -19,18 +19,18 @@ export default function Select() {
         </div>
         <div className="flex flex-col px-30 gap-4">
           <Button
-            onClick={() => router.push("/dolbomi/info")}
             variant="contained"
+            onClick={() => router.push("/customer/main")}
             sx={{
               backgroundColor: "var(--sub)",
               borderRadius: 4,
               paddingY: 1,
             }}
           >
-            저는 돌보미로 일하고 싶어요
+            저는 돌봄이 필요해요
           </Button>
-
           <Button
+            onClick={() => router.push("/dolbomi/info")}
             variant="contained"
             sx={{
               backgroundColor: "var(--main)",
@@ -38,7 +38,7 @@ export default function Select() {
               paddingY: 1,
             }}
           >
-            저는 돌봄이 필요해요
+            저는 돌보미로 일하고 싶어요
           </Button>
         </div>
       </div>

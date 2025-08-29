@@ -139,8 +139,8 @@ export default function Info() {
               sx={{
                 width: 140,
                 px: 0,
-                color: "var(--sub)",
-                borderColor: "var(--sub)",
+                color: "var(--subDark)",
+                borderColor: "var(--subDark)",
               }}
             >
               본인인증하기
@@ -179,12 +179,12 @@ export default function Info() {
 
             <IconButton component="label">
               <div
-                style={{ borderRadius: 3, border: "1px dashed var(--sub)" }}
+                style={{ borderRadius: 3, border: "2px dashed var(--subDark)" }}
                 className="w-20 h-20 flex items-center justify-center"
               >
                 <FontAwesomeIcon
                   icon={faPlus}
-                  style={{ color: "var(--sub)" }}
+                  style={{ color: "var(--subDark)" }}
                 />
               </div>
               <input

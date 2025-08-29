@@ -19,7 +19,7 @@ import {
 export default function My() {
   const router = useRouter();
 
-  const [preview, setPreview] = useState<string | null>(
+  const [preview, setPreview] = useState<string>(
     "https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
   );
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
