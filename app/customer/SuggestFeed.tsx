@@ -6,16 +6,24 @@ import {
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button } from "@mui/material";
+import { Box, Button, Modal, Typography } from "@mui/material";
 import { useState } from "react";
+import PaymentModal from "./now/applier/PaymentModal";
 
 interface SuggestFeedProps {
   name: string;
   gender: string;
   age: string;
   id: number;
+  price?: number;
 }
-export const SuggestFeed = ({ name, gender, age, id }: SuggestFeedProps) => {
+export const SuggestFeed = ({
+  name,
+  gender,
+  age,
+  id,
+  price = 40000,
+}: SuggestFeedProps) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <div
@@ -37,7 +45,7 @@ export const SuggestFeed = ({ name, gender, age, id }: SuggestFeedProps) => {
           </div>
           <div className="flex gap-1 items-end text-[var(--text2)]">
             <div className="font-bold text-[15px]">제안 가격:</div>
-            <div className="font-normal text-[14px]">40000</div>
+            <div className="font-normal text-[14px]">{price}</div>
           </div>
         </div>
       </div>
@@ -88,9 +96,16 @@ export const SuggestFeed = ({ name, gender, age, id }: SuggestFeedProps) => {
           width: "100%",
           padding: "6px 0px",
         }}
+        onClick={() => setOpen(true)}
       >
         이 돌보미 선택할래요
       </Button>
+      <PaymentModal
+        open={open}
+        onClose={() => setOpen(false)}
+        itemName={""}
+        amount={price}
+      />
     </div>
   );
 };
