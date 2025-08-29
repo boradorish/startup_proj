@@ -13,9 +13,8 @@ export const CBottomTab = ({ location }: BottomTabProps) => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     console.log(newValue);
-    if (newValue == 0) router.push("/dolbomi/home");
-    if (newValue == 1) router.push("/dolbomi/chat");
-    if (newValue == 2) router.push("/dolbomi/my");
+    if (newValue == 0) router.push("/customer/main");
+    if (newValue == 1) router.push("/customer/chat");
   };
   return (
     <Box
@@ -23,7 +22,7 @@ export const CBottomTab = ({ location }: BottomTabProps) => {
         borderBottom: 1,
         position: "fixed",
         bottom: 0,
-        backgroundColor: "var(--mainLight2)",
+        backgroundColor: "var(--subLight)",
         width: "100%",
         display: "flex",
         justifyContent: "center",
@@ -40,7 +39,7 @@ export const CBottomTab = ({ location }: BottomTabProps) => {
           label={
             <FontAwesomeIcon
               icon={faHome}
-              style={{ color: "var(--mainDark)" }}
+              style={{ color: "var(--subDark)" }}
             />
           }
         />
@@ -49,15 +48,7 @@ export const CBottomTab = ({ location }: BottomTabProps) => {
           label={
             <FontAwesomeIcon
               icon={faComment}
-              style={{ color: "var(--mainDark)" }}
-            />
-          }
-        />
-        <Tab
-          label={
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{ color: "var(--mainDark)" }}
+              style={{ color: "var(--subDark)" }}
             />
           }
         />
