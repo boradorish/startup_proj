@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faComment,
   faHome,
+  faPaperclip,
   faStar,
   faThumbsUp,
   faUser,
@@ -39,11 +40,11 @@ export const Feed = ({
   return (
     <div
       style={{
-        backgroundColor: "var(--main)",
+        backgroundColor: type == "dolbomi" ? "var(--main)" : "var(--subLight)",
         borderRadius: 7,
         width: "100%",
       }}
-      className="px-3 py-2"
+      className="px-3 py-2 relative"
       onClick={
         type == "dolbomi"
           ? () => router.push(`/dolbomi/detail/${id}`)
@@ -52,25 +53,75 @@ export const Feed = ({
           : () => {}
       }
     >
-      <div className="text-[15px] font-bold text-[var(--text1)] mb-1">
+      {type !== "dolbomi" && (
+        <FontAwesomeIcon
+          icon={faPaperclip}
+          style={{ position: "absolute", top: -10, width: 20, height: 20 }}
+        />
+      )}
+
+      <div className="text-[15px] font-bold text-[var(--text1)] mt-2 mb-1">
         {title}
       </div>
       <div className="text-[12px] text-[var(--text2)]">{content}</div>
       <div className="h-2" />
-      {type !== "past" && (
+
+      {type == "dolbomi" && (
         <div className="flex justify-between">
-          <div className="flex items-center gap-0.5 text-[var(--text2)]">
-            <div className="text-[12px]  ">{location}</div>
-            {" · "}
-            <div className="text-[12px]  ">{time}</div>
-            {" · "}
-            <div className="text-[12px]  ">조회 {check}</div>
+          <div className="flex gap-2 mb-1">
+            {id == 0 && (
+              <>
+                <span className="px-2 py-0.5 bg-[var(--subLight)] text-[12px] rounded-md">
+                  노인 동행
+                </span>
+                <span className="px-2 py-0.5 bg-gray-200 text-[12px] rounded-md">
+                  봉천동
+                </span>
+              </>
+            )}
+            {id == 1 && (
+              <>
+                <span className="px-2 py-0.5 bg-[var(--subLight)] text-[12px] rounded-md">
+                  아이 등하교
+                </span>
+                <span className="px-2 py-0.5 bg-gray-200 text-[12px] rounded-md">
+                  서초구
+                </span>
+              </>
+            )}
+            {id == 2 && (
+              <>
+                <span className="px-2 py-0.5 bg-[var(--subLight)] text-[12px] rounded-md">
+                  노인 동행
+                </span>
+                <span className="px-2 py-0.5 bg-gray-200 text-[12px] rounded-md">
+                  수성구
+                </span>
+              </>
+            )}
           </div>
           <div className="flex items-center text-[var(--text2)]">
             <FontAwesomeIcon icon={faStar} style={{ width: 10 }} />
             <div className="text-[12px] px-1">{scrap}</div>
           </div>
         </div>
+      )}
+      {type == "now" && (
+        <Button
+          variant="outlined"
+          onClick={() => setMore(!more)}
+          sx={{
+            paddingY: 1,
+            boxShadow: "none",
+            width: "100%",
+            padding: "1px 0px",
+            color: "var(--subDark2)",
+            borderColor: "var(--subDark2)",
+            fontWeight: 600,
+          }}
+        >
+          지원자 보러가기
+        </Button>
       )}
 
       {type == "past" && (
