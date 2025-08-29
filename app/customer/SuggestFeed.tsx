@@ -13,8 +13,9 @@ interface SuggestFeedProps {
   name: string;
   gender: string;
   age: string;
+  id: number;
 }
-export const SuggestFeed = ({ name, gender, age }: SuggestFeedProps) => {
+export const SuggestFeed = ({ name, gender, age, id }: SuggestFeedProps) => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <div
@@ -23,7 +24,7 @@ export const SuggestFeed = ({ name, gender, age }: SuggestFeedProps) => {
     >
       <div className="gap-3 flex items-center">
         <img
-          src={"/dummy_dolbomi0.png"}
+          src={`/dummy_dolbomi${id}.png`}
           alt="preview"
           className="w-14 h-14 object-cover rounded"
           style={{ backgroundColor: "var(--sub)", borderRadius: 100 }}

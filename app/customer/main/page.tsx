@@ -16,7 +16,7 @@ import { CBottomTab } from "../CBottomTab";
 export default function Home() {
   const router = useRouter();
 
-  const [preview, setPreview] = useState<string>("/dummy_customer.png");
+  const [preview, setPreview] = useState<string>("/dummy_customer0.png");
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {

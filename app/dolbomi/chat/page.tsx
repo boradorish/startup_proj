@@ -15,9 +15,16 @@ export default function Chat() {
       <div className="w-90 jusitfy-start mb-3">
         <div className="font-bold text-[var(--text1)] text-[23px] ">채팅</div>
       </div>
-      <div className="app-container flex flex-col items-center px-10 gap-5">
+      <div className="app-container flex flex-col items-center px-10 gap-3">
         {dummyChatData.map((value, key) => (
-          <ChatFeed key={key} name={value.name} content={value.content} />
+          <ChatFeed
+            key={key}
+            name={value.name}
+            content={value.content}
+            id={value.id}
+            isNew={value.isNew}
+            type="customer"
+          />
         ))}
       </div>
 

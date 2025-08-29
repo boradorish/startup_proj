@@ -2,15 +2,29 @@ import { ChatFeedProps } from "./dolbomi/ChatFeed";
 import { FeedProps } from "./dolbomi/Feed";
 
 export const dummyChatData: ChatFeedProps[] = [
-  { name: "지우엄마", content: "저녁에 아이 픽업 해주세요." },
-  { name: "보호자", content: "네!" },
-  { name: "카페모카", content: "오늘은 안 될 거 같아요.." },
-  { name: "지우엄마", content: "저녁에 아이 픽업 해주세요." },
-  { name: "보호자", content: "네!" },
-  { name: "카페모카", content: "오늘은 안 될 거 같아요.." },
-  { name: "지우엄마", content: "저녁에 아이 픽업 해주세요." },
-  { name: "보호자", content: "네!" },
-  { name: "카페모카", content: "오늘은 안 될 거 같아요.." },
+  {
+    name: "지우엄마",
+    content: "저녁에 아이 픽업 해주세요.",
+    id: 0,
+    isNew: true,
+  },
+  {
+    name: "아림맘",
+    content: "저녁 7시로 시간 변경 가능할까요?",
+    id: 1,
+    isNew: false,
+  },
+  { name: "카페모카", content: "네 감사합니다", id: 2, isNew: true },
+];
+export const dummyDolbomiChatData: ChatFeedProps[] = [
+  {
+    name: "김도움",
+    content: "아이 하원 시간이 6시 맞나요?",
+    id: 0,
+    isNew: true,
+  },
+  { name: "이기부", content: "네!", id: 1, isNew: false },
+  { name: "장봉사", content: "오늘은 안 될 거 같아요..", id: 2, isNew: false },
 ];
 
 export const dummyFeedData: FeedProps[] = [
