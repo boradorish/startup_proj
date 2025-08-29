@@ -88,7 +88,7 @@ export const SuggestFeed = ({ name, gender, age }: SuggestFeedProps) => {
           padding: "6px 0px",
         }}
       >
-        돌보미 선택 하기
+        이 돌보미 선택할래요
       </Button>
     </div>
   );

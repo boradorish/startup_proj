@@ -94,6 +94,7 @@ export default function Home() {
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
         <Button
+          onClick={() => router.push("/customer/past")}
           variant="contained"
           sx={{
             backgroundColor: "var(--sub)",
