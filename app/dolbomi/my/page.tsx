@@ -128,6 +128,21 @@ export default function My() {
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
         <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "var(--sub)",
+            borderRadius: 4,
+            paddingY: 1,
+            marginTop: 2,
+            boxShadow: "none",
+            width: "100%",
+            padding: "6px 0px",
+          }}
+        >
+          지원한 돌봄 진행내역 보기
+          <FontAwesomeIcon icon={faAngleRight} />
+        </Button>
+        <Button
           // onClick={() => router.push("/dolbomi/home")}
           variant="contained"
           sx={{
