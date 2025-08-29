@@ -53,18 +53,18 @@ export const Feed = ({
       }
     >
       <div className="text-[15px] font-bold text-[var(--text3)]">{title}</div>
-      <div className="text-[12px] text-[var(--text4)]">{content}</div>
+      <div className="text-[12px] text-[var(--text2)]">{content}</div>
       <div className="h-2" />
       {type !== "past" && (
         <div className="flex justify-between">
-          <div className="flex items-center gap-0.5 text-[var(--text4)]">
+          <div className="flex items-center gap-0.5 text-[var(--text2)]">
             <div className="text-[12px]  ">{location}</div>
             {" · "}
             <div className="text-[12px]  ">{time}</div>
             {" · "}
             <div className="text-[12px]  ">조회 {check}</div>
           </div>
-          <div className="flex items-center text-[var(--text4)]">
+          <div className="flex items-center text-[var(--text2)]">
             <FontAwesomeIcon icon={faThumbsUp} style={{ width: 10 }} />
             <div className="text-[12px] px-1">{likes}</div>
 
@@ -84,7 +84,8 @@ export const Feed = ({
               boxShadow: "none",
               width: "100%",
               padding: "1px 0px",
-              color: "var(--sub)",
+              color: "var(--text3)",
+              fontWeight: 600,
             }}
           >
             더보기

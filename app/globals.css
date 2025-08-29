@@ -22,8 +22,8 @@
   :root {
     --background: #0a0a0a;
     /* --foreground: #ededed; */
-    --main: #553f2f;
-    --mainLight: #897b68;
+    --main: #8b715d;
+    --mainLight: #9a816c;
     --mainLight2: #685c4c;
     --mainDark: #3f2e22;
     --sub: #b0677d;
@@ -33,7 +33,7 @@
     --subDark: #934b61;
     --text1: #382c1b;
     --text2: #2d1f0c;
-    --text3: #8e8c89;
+    --text3: #473f33;
     --text4: #5a5650;
   }
 }
