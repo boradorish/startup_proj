@@ -24,10 +24,14 @@
     /* --foreground: #ededed; */
     --main: #553f2f;
     --mainLight: #685e50;
+    --mainLight2: #5e5548;
+    --mainDark: #3f2e22;
     --sub: #b0677d;
     --subLight: #9e6d80;
     --text1: #382c1b;
     --text2: #2d1f0c;
+    --text3: #8e8c89;
+    --text4: #5a5752;
   }
 }
 

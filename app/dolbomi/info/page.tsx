@@ -41,7 +41,7 @@ export default function Info() {
 
   return (
     <div className="app-container flex flex-col items-center justify-center">
-      <div className="h-30" />
+      <div className="h-10" />
       <Stack sx={{ paddingX: 5 }} spacing={3}>
         <div className="pt-4 text-[var(--text1)] text-[15px] font-bold flex items-center justify-center">
           당신의 프로필을 등록해주세요.
