@@ -78,7 +78,7 @@ export default function Home() {
           </div>
         </div>
         <Button
-          // onClick={() => router.push("/dolbomi/home")}
+          onClick={() => router.push("/customer/now")}
           variant="contained"
           sx={{
             backgroundColor: "var(--sub)",

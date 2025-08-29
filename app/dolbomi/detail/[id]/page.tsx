@@ -41,7 +41,7 @@ export default function DetailPage() {
 
   return (
     <div className="app-container flex flex-col">
-      <AlertModal open={modal} />
+      <AlertModal open={modal} content="돌봄 지원이 완료되었어요" />
       <TopButton />
       <div
         className="px-5 py-2 mx-3"
@@ -207,7 +207,7 @@ export const TopButton = ({
   );
 };
 
-const AlertModal = ({ open }: { open: boolean }) => {
+const AlertModal = ({ open, content }: { open: boolean; content: string }) => {
   return (
     <div
       style={{
@@ -215,7 +215,7 @@ const AlertModal = ({ open }: { open: boolean }) => {
         justifyContent: "center",
         alignItems: "center",
         maxWidth: "393px",
-        width: "100wh",
+        width: "100vw",
       }}
     >
       <div
@@ -228,7 +228,7 @@ const AlertModal = ({ open }: { open: boolean }) => {
         {open && (
           <>
             <DialogContent>
-              <Alert severity="success">돌봄 지원이 완료되었어요</Alert>
+              <Alert severity="success">{content}</Alert>
             </DialogContent>
           </>
         )}
