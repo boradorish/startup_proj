@@ -77,7 +77,7 @@ export default function Home() {
               <div className="flex text-[var(--text2)] text-[15px] gap-1 font-bold items-center">
                 <div>거주지</div>
                 <div className="text-[var(--text2)] font-normal">
-                  서울시 봉천동
+                  서울시 서초구
                 </div>
               </div>
             </div>
@@ -156,6 +156,17 @@ export default function Home() {
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
       </div>
+      {/* <div className="w-90 jusitfy-start mt-3">
+        <div className="font-bold text-[var(--subDark2)] text-[23px] ">
+          설정
+        </div>
+      </div>
+      <div>
+        <div className="flex justify-between items-center">
+          <div>앱 설정</div>
+          <FontAwesomeIcon icon={faAngleRight} />
+        </div>
+      </div> */}
       <CBottomTab location={0} />
     </div>
   );
