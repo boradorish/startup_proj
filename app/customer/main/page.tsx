@@ -7,7 +7,13 @@ import { useRouter } from "next/navigation";
 import { IconButton } from "@mui/material";
 import {
   faAngleRight,
+  faCircleInfo,
+  faEnvelope,
+  faGear,
+  faHeadset,
+  faInfo,
   faPencil,
+  faPhone,
   faSquarePen,
 } from "@fortawesome/free-solid-svg-icons";
 import { TopBanner } from "@/app/dolbomi/TopBanner";
@@ -150,23 +156,51 @@ export default function Home() {
             boxShadow: "none",
             width: "100%",
             padding: "6px 0px",
+            fontSize: 18,
+            fontWeight: 600,
           }}
         >
           돌봄 의뢰하러 가기
           <FontAwesomeIcon icon={faAngleRight} />
         </Button>
-      </div>
-      {/* <div className="w-90 jusitfy-start mt-3">
-        <div className="font-bold text-[var(--subDark2)] text-[23px] ">
-          설정
+        <div className="w-90 jusitfy-start mt-3 ">
+          <div className="font-bold text-[var(--subDark2)] text-[23px] ">
+            설정
+          </div>
+        </div>
+        <div className="w-full bg-[var(--subLight)] gap-3 flex  flex-col rounded p-2">
+          <div className="flex w-full justify-between items-center">
+            <div className="flex w-full gap-2  items-center">
+              <FontAwesomeIcon icon={faGear} />
+              <div>앱 설정</div>
+            </div>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </div>
+          <div className="flex w-full justify-between items-center">
+            <div className="flex w-full gap-2 items-center">
+              <FontAwesomeIcon icon={faHeadset} />
+              <div>고객센터</div>
+            </div>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </div>
+          <div className="flex w-full justify-between items-center">
+            <div className="flex w-full gap-2 items-center">
+              <FontAwesomeIcon icon={faEnvelope} />
+              <div>의견 남기기</div>
+            </div>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </div>
+          <div className="flex w-full justify-between items-center">
+            <div className="flex w-full gap-2 items-center">
+              <FontAwesomeIcon icon={faCircleInfo} />
+              <div>약관 및 정책</div>
+            </div>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </div>
         </div>
       </div>
-      <div>
-        <div className="flex justify-between items-center">
-          <div>앱 설정</div>
-          <FontAwesomeIcon icon={faAngleRight} />
-        </div>
-      </div> */}
+      <div className="h-15" />
+
       <CBottomTab location={0} />
     </div>
   );
