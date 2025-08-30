@@ -177,6 +177,7 @@ export const Feed = ({
                   width: "100%",
                   padding: "6px 0px",
                 }}
+                onClick={() => router.push("/review")}
               >
                 돌보미 리뷰쓰기
               </Button>
