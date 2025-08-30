@@ -144,7 +144,7 @@ export default function DetailPage() {
             </div>
             <span>4.5</span>
           </div>
-          <p className="font-semibold mt-5">지원 가격: {value * 500}</p>
+          <p className="font-semibold mt-5">지원 가격: {value * 200}</p>
           <div className="text-[13px] mb-1">
             *돌봄 리뷰가 부족하거나, 별점이 낮을 때는 <br />더 낮은 가격으로
             지원하면 의뢰 성사율이 올라갑니다!
