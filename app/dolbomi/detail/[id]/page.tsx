@@ -53,9 +53,7 @@ export default function DetailPage() {
       >
         <div className="flex gap-2 pt-2 pb-4">
           <img
-            src={
-              "https://image.utoimage.com/preview/cp872722/2022/12/202212008462_500.jpg"
-            }
+            src={"/dummy_customer0.png"}
             alt="preview"
             className="w-10 h-10 object-cover rounded"
             style={{ backgroundColor: "var(--sub)", borderRadius: 100 }}
