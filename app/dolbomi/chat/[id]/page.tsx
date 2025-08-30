@@ -33,7 +33,7 @@ export default function KakaoStyleChat() {
     {
       id: "d1-2",
       author: "me",
-      text: "7시 반포유치원 맞나요?",
+      text: "8시 반포유치원 맞나요?",
       time: "오전 9:12",
       date: "2025-08-29",
     },

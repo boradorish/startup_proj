@@ -21,7 +21,7 @@ export const dummyChatData: ChatFeedProps[] = [
 export const dummyDolbomiChatData: ChatFeedProps[] = [
   {
     name: "김도움",
-    content: "아이 하원 시간이 6시 맞나요?",
+    content: "아이 하원 시간이 8시 맞나요?",
     id: 0,
     isNew: true,
   },
@@ -45,7 +45,7 @@ export const dummyFeedData: FeedProps[] = [
     id: 1,
     title: "아이 학원 하원 동행자 구합니다",
     content:
-      "저녁 6시에 유치원에서 ○○학원까지 아동 하원 동행 도와주실 여성 분 찾습니다. 제가 오늘 급하게 저녁일정이 생겨서 아이 유치원에 하원 시간에 맞추지 못 할 거 같아서 요청 드려요..",
+      "저녁 8시에 유치원에서 ○○학원까지 아동 하원 동행 도와주실 여성 분 찾습니다. 제가 오늘 급하게 저녁일정이 생겨서 아이 유치원에 하원 시간에 맞추지 못 할 거 같아서 요청 드려요..",
     location: "서울 서초구 반포4동 ○○유치원 → ○○학원",
     time: "2시간 전",
     check: 317,
