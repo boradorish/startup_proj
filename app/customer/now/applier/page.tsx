@@ -15,14 +15,14 @@ export default function ApplierPage() {
           name="김도움"
           gender={"여성"}
           age={"40"}
-          price={40000}
+          price={18000}
         />
         <SuggestFeed
           id={1}
           name="이기부"
           gender={"여성"}
           age={"45"}
-          price={45000}
+          price={19000}
         />
       </div>
     </div>

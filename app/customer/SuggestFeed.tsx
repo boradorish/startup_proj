@@ -22,7 +22,7 @@ export const SuggestFeed = ({
   gender,
   age,
   id,
-  price = 40000,
+  price = 20000,
 }: SuggestFeedProps) => {
   const [open, setOpen] = useState<boolean>(false);
   return (

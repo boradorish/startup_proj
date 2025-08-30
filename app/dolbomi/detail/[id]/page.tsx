@@ -74,7 +74,7 @@ export default function DetailPage() {
           <div className="font-bold text-[18px]">
             이만큼까지 지출할 수 있어요
           </div>
-          <div className="text-[15px]">50000</div>
+          <div className="text-[15px]">20000</div>
         </div>
         <div className="flex py-3 items-center justify-end gap-1 w-82">
           <FontAwesomeIcon icon={faStar} />
@@ -105,11 +105,11 @@ export default function DetailPage() {
         <DolbomiProfile
           name="이봉사"
           id={1}
-          price={40000}
+          price={20000}
           star={4.3}
           age={43}
         />
-        <DolbomiProfile name="김도움" id={0} price={43000} star={4.5} />
+        <DolbomiProfile name="김도움" id={0} price={17000} star={4.5} />
       </div>
       <Drawer
         anchor="bottom"
@@ -164,7 +164,7 @@ export default function DetailPage() {
               max={100}
             />
             <div className="text-lg font-semibold text-[var(--main)]">
-              50000
+              20000
             </div>
           </Stack>
           <Button
@@ -248,7 +248,7 @@ const AlertModal = ({ open, content }: { open: boolean; content: string }) => {
 const DolbomiProfile = ({
   id = 0,
   name = "김도움",
-  price = 50000,
+  price = 20000,
   star = 4.7,
   age = 40,
   gender = "여성",

@@ -162,7 +162,7 @@ export const Feed = ({
                   </div>
                   <div className="flex gap-1 items-end text-[var(--text2)]">
                     <div className="font-bold text-[15px]">금액:</div>
-                    <div className="font-normal text-[14px]">40000</div>
+                    <div className="font-normal text-[14px]">18000</div>
                   </div>
                 </div>
               </div>
