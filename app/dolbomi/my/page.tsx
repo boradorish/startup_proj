@@ -157,21 +157,6 @@ export default function My() {
               스크랩한 돌봄 의뢰
               <FontAwesomeIcon icon={faAngleRight} />
             </Button>
-            <Button
-              // onClick={() => router.push("/dolbomi/home")}
-              variant="contained"
-              sx={{
-                backgroundColor: "var(--mainDark)",
-                borderRadius: 2,
-                paddingY: 1,
-                boxShadow: "none",
-                width: "100%",
-                padding: "6px 0px",
-              }}
-            >
-              좋아요한 돌봄 의뢰
-              <FontAwesomeIcon icon={faAngleRight} />
-            </Button>
           </div>
         </div>
       </div>
